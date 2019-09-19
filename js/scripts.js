@@ -13,6 +13,16 @@ $(document).ready(function(){
     else if (number1 === number2 || number2 === number3 || number1 === number3){
       $("form").append("<h1>We generated an isosceles triangle for you</h1>")
     }
+    else if (number1 + number2 >= number3 || number2 + number3 >= number1 || number1 + number3 >= number2){
+      $("form").append("<h1>Wait a minute! Thats not a triangle</h1>")
+    }
+    else if (isNaN(number1,number2,number3)){
+      $("form").append("<h1>Wait a minute! Thats is not a fucking number</h1>")
+    }
+
+    else if (number1 != number2 || number2 != number3 || number1 != number3){
+      $("form").append("<h1>We generated a scalene triangle for you</h1>")
+    }
 
   });
 })
